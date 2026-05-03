@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "assets.jaydingulley.me",
+        port: "",
+      },
+      {
+        protocol: "https",
         hostname: "images.unsplash.com",
         port: "",
       },
