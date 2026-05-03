@@ -1,11 +1,11 @@
 # [jaydingulley.me](https://jaydingulley.me) &middot; [![GitHub License](https://img.shields.io/github/license/jaydindg/jaydingulley.me?label=License)](https://github.com/jaydindg/jaydingulley.me/blob/main/LICENSE) ![GitHub Repo Views](https://gitviews.com/repo/jaydindg/jaydingulley.me.svg?style=flat&label-color=%23555&color=%23f59e0b)
 
-A minimal, pixel-perfect dev portfolio, shadcn registry, and blog to showcase my work as a Design Engineer.
+A minimal, pixel-perfect dev portfolio, shadcn registry, and blog to showcase my work as a Developer.
 
 → Check out the live site: [jaydingulley.me](https://jaydingulley.me)
 
-[![screenshot-dark](https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?v=9#gh-dark-mode-only)](https://jaydingulley.me#gh-dark-mode-only)
-[![screenshot-light](https://assets.chanhdai.com/images/screenshot-desktop-light.webp?v=9#gh-light-mode-only)](https://jaydingulley.me#gh-light-mode-only)
+[![screenshot-dark](https://assets.jaydingulley.me/images/screenshot-desktop-dark.webp?v=9#gh-dark-mode-only)](https://jaydingulley.me#gh-dark-mode-only)
+[![screenshot-light](https://assets.jaydingulley.me/images/screenshot-desktop-light.webp?v=9#gh-light-mode-only)](https://jaydingulley.me#gh-light-mode-only)
 
 ## Overview
 
@@ -218,7 +218,7 @@ This project is proudly supported by:
 
 This project is tested with BrowserStack
 
-> Found this project useful? [Sponsor me](https://github.com/sponsors/ncdai) to help with support and maintenance.
+> Found this project useful? [Sponsor me](https://github.com/sponsors/jaydindg) to help with support and maintenance.
 
 ## Stats
 
@@ -226,5 +226,5 @@ This project is tested with BrowserStack
 
 ## Star History
 
-[![RepoStars-dark](https://www.repostars.dev/api/embed?repo=ncdai%2Fjaydingulley.me&theme=dark#gh-dark-mode-only)](https://www.repostars.dev/?repos=ncdai%2Fjaydingulley.me&theme=dark#gh-dark-mode-only)
-[![RepoStars-light](https://www.repostars.dev/api/embed?repo=ncdai%2Fjaydingulley.me&theme=light#gh-light-mode-only)](https://www.repostars.dev/?repos=ncdai%2Fjaydingulley.me&theme=light#gh-light-mode-only)
+[![RepoStars-dark](https://www.repostars.dev/api/embed?repo=jaydindg%2Fjaydingulley.me&theme=dark#gh-dark-mode-only)](https://www.repostars.dev/?repos=jaydindg%2Fjaydingulley.me&theme=dark#gh-dark-mode-only)
+[![RepoStars-light](https://www.repostars.dev/api/embed?repo=jaydindg%2Fjaydingulley.me&theme=light#gh-light-mode-only)](https://www.repostars.dev/?repos=jaydindg%2Fjaydingulley.me&theme=light#gh-light-mode-only)
