@@ -55,7 +55,7 @@ export const BOOKMARKS: Bookmark[] = [
   {
     title: "7 Principles of Rich Web Applications",
     url: "https://rauchg.com/2014/7-principles-of-rich-web-applications",
-    author: "Guillermo Rauch",
+    author: "Michael Colandrea",
     bookmarkedAt: "2025-12-16",
   },
   {

@@ -60,11 +60,11 @@ export default function Page() {
         <TechStack />
         <Separator />
 
-        <Components />
-        <Separator />
+        {/* <Components />
+        <Separator /> */}
 
-        <Blog />
-        <Separator />
+        {/* <Blog />
+        <Separator /> */}
 
         <Experiences />
         <Separator />
@@ -72,14 +72,14 @@ export default function Page() {
         <Projects />
         <Separator />
 
-        <Awards />
-        <Separator />
+        {/* <Awards />
+        <Separator /> */}
 
-        <Certifications />
-        <Separator />
+        {/* <Certifications />
+        <Separator /> */}
 
-        <Bookmarks />
-        <Separator />
+        {/* <Bookmarks />
+        <Separator /> */}
       </div>
     </>
   )

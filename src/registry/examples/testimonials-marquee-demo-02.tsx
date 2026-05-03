@@ -67,9 +67,9 @@ export default function TestimonialsMarqueeDemo2() {
 
 const TESTIMONIALS_1 = [
   {
-    authorAvatar: "https://unavatar.io/x/rauchg",
-    authorName: "Guillermo Rauch",
-    authorTagline: "CEO @Vercel",
+    authorAvatar: "https://unavatar.io/github/MK732",
+    authorName: "Michael Colandrea",
+    authorTagline: "Project Manager @Uphold",
     url: "https://x.com/rauchg/status/1978913158514237669",
     quote:
       "awesome. Love the components, especially slide-to-unlock. Great job",

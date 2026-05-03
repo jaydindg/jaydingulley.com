@@ -22,7 +22,7 @@ export default function TestimonialSpotlightDemo() {
         <TestimonialAuthor>
           <TestimonialAvatar>
             <TestimonialAvatarImg
-              src="https://unavatar.io/x/shadcn"
+              src="https://unavatar.io/linkedin/user:alizjah-jarvis"
               alt="shadcn"
             />
             <TestimonialAvatarRing />
@@ -41,7 +41,7 @@ export default function TestimonialSpotlightDemo() {
           </TestimonialAuthorName>
 
           <TestimonialAuthorTagline>
-            Creator of shadcn/ui
+            Trainer & Analyst @AutoScouts
           </TestimonialAuthorTagline>
         </TestimonialAuthor>
       </Testimonial>

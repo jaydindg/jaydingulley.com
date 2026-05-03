@@ -1,12 +1,12 @@
 import { ArrowRightIcon } from "lucide-react"
 import Link from "next/link"
 
-import {
-  ComponentItem,
-  ComponentItemDot,
-  ComponentItemIcon,
-  ComponentItemTitle,
-} from "@/app/(app)/(pages)/components/component-item"
+// import {
+//   ComponentItem,
+//   ComponentItemDot,
+//   ComponentItemIcon,
+//   ComponentItemTitle,
+// } from "@/app/(app)/(pages)/components/component-item"
 import { Button } from "@/components/base/ui/button"
 import { ComponentIcon } from "@/components/icons"
 import { getDocsByCategory } from "@/features/doc/data/documents"
@@ -25,7 +25,7 @@ export function Components() {
         </PanelTitle>
       </PanelHeader>
 
-      <div className="relative pt-2">
+      {/* <div className="relative pt-2">
         <div className="absolute inset-0 -z-1 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2 md:grid-cols-3">
           <div className="border-r border-line" />
           <div className="border-l border-line md:border-x" />
@@ -49,7 +49,7 @@ export function Components() {
             </ComponentItem>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="-mt-px flex justify-center py-2">
         <Button

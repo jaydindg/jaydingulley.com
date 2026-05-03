@@ -34,9 +34,9 @@ const TESTIMONIALS_1: TestimonialType[] = [
     quote: "one of my favorite projects that submitted! you are crushing it!",
   },
   {
-    authorAvatar: "https://unavatar.io/x/rauchg",
-    authorName: "Guillermo Rauch",
-    authorTagline: "CEO @Vercel",
+    authorAvatar: "https://unavatar.io/github/MK732",
+    authorName: "Michael Colandrea",
+    authorTagline: "Project Manager @Uphold",
     url: "https://x.com/rauchg/status/1978913158514237669",
     quote:
       "awesome. Love the components, especially slide-to-unlock. Great job",
@@ -65,7 +65,7 @@ const TESTIMONIALS_1: TestimonialType[] = [
     quote: "@iamncdai is one of the best design engineers!",
   },
   {
-    authorAvatar: "https://unavatar.io/x/shadcncraft?v=2",
+    authorAvatar: "https://unavatar.io/linkedin/user:alizjah-jarviscraft?v=2",
     authorName: "shadcncraft",
     authorTagline: "shadcncraft.com",
     url: "https://x.com/shadcncraft/status/2017091317244055988",
@@ -139,9 +139,9 @@ const TESTIMONIALS_2: TestimonialType[] = [
     quote: "amazing, such cool libraries",
   },
   {
-    authorAvatar: "https://unavatar.io/x/shadcn",
-    authorName: "shadcn",
-    authorTagline: "Creator of shadcn/ui",
+    authorAvatar: "https://unavatar.io/linkedin/user:alizjah-jarvis",
+    authorName: "Alizjah Jarvis",
+    authorTagline: "Trainer & Analyst @AutoScouts",
     url: "https://x.com/shadcn/status/2032193591133495700",
     quote: "You’re doing amazing work.",
   },

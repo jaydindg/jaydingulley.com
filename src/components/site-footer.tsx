@@ -17,13 +17,14 @@ export function SiteFooter() {
           Built by{" "}
           <a
             className="link transition-[color] hover:text-foreground"
-            href="https://x.com/iamncdai"
+            href="https://github.com/jaydindg"
             target="_blank"
             rel="noopener"
           >
-            ncdai
+            jaydindg
           </a>
-          . The source code is available on{" "}
+          . 
+          The source code is available on{" "}
           <a
             className="link transition-[color] hover:text-foreground"
             href={SOURCE_CODE_GITHUB_URL}
@@ -48,9 +49,9 @@ export function SiteFooter() {
 
             <Separator className="max-sm:hidden" />
 
-            <a
+            {/* <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href="https://x.com/iamncdai?utm_source=chanhdai.com"
+              href="https://x.com/iamncdai?utm_source=jaydingulley.me"
               target="_blank"
               rel="noopener"
               aria-label="X"
@@ -58,11 +59,11 @@ export function SiteFooter() {
               <Icons.x className="size-4" />
             </a>
 
-            <Separator />
+            <Separator /> */}
 
             <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href="https://github.com/ncdai?utm_source=chanhdai.com"
+              href="https://github.com/jaydindg?utm_source=jaydingulley.me"
               target="_blank"
               rel="noopener"
               aria-label="GitHub"
@@ -74,7 +75,7 @@ export function SiteFooter() {
 
             <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href="https://www.linkedin.com/in/ncdai?utm_source=chanhdai.com"
+              href="https://www.linkedin.com/in/jaydin-gulley?utm_source=jaydingulley.me"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"

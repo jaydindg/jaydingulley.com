@@ -28,14 +28,14 @@ export default function TestimonialDemo() {
         <TestimonialAuthor>
           <TestimonialAvatar>
             <TestimonialAvatarImg
-              src="https://unavatar.io/x/rauchg"
-              alt="Guillermo Rauch"
+              src="https://unavatar.io/github/MK732"
+              alt="Michael Colandrea"
             />
             <TestimonialAvatarRing />
           </TestimonialAvatar>
 
           <TestimonialAuthorName>
-            Guillermo Rauch
+            Michael Colandrea
             <TestimonialVerifiedBadge className="text-info">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -45,7 +45,7 @@ export default function TestimonialDemo() {
               </svg>
             </TestimonialVerifiedBadge>
           </TestimonialAuthorName>
-          <TestimonialAuthorTagline>CEO @Vercel</TestimonialAuthorTagline>
+          <TestimonialAuthorTagline>Project Manager @Uphold</TestimonialAuthorTagline>
         </TestimonialAuthor>
       </Testimonial>
     </a>

@@ -1,5 +1,5 @@
 ---
-name: ncdai-registry-block-classifier
+name: jaydindg-registry-block-classifier
 description: Classify blocks into appropriate categories (Marketing, Content, Application) and write concise, descriptive block descriptions. Use when creating new blocks, updating block metadata, or organizing the blocks registry.
 ---
 

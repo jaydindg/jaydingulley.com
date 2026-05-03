@@ -1,58 +1,55 @@
 import type { User } from "@/features/portfolio/types/user"
 
 export const USER: User = {
-  firstName: "Chánh Đại",
-  lastName: "Nguyễn",
-  displayName: "Chánh Đại",
-  username: "ncdai",
+  firstName: "Jaydin",
+  lastName: "Gulley",
+  displayName: "Jaydin Gulley",
+  username: "jaydindg",
   gender: "male",
   pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
   flipSentences: [
-    "Creating with code. Small details matter.",
-    "Design Engineer",
-    "Open Source Contributor",
+    "Homelab Learner",
+    "Strong with React",
+    "Full-Stack Focus",
   ],
-  address: "Ho Chi Minh City, Viet Nam",
-  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  website: "https://chanhdai.com",
-  jobTitle: "Design Engineer",
+  address: "St. Louis, Missouri, USA",
+  phoneNumber: "KzEgKDYxOCkgNDcwLTkzMjk=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  email: "amF5ZGluLmd1bGxleUBvdXRsb29rLmNvbQ==", // base64 encoded
+  website: "https://jaydingulley.me",
+  jobTitle: "Full-Stack Developer",
   jobs: [
     {
-      title: "Design Engineer",
-      company: "shadcncraft",
-      website: "https://shadcncraft.com",
-      experienceId: "shadcncraft",
+      title: "Full-Stack Developer",
+      company: "Feathermark.io",
+      website: "https://www.feathermark.io",
+      experienceId: "feathermarkio",
     },
     {
       title: "Founder",
-      company: "Quaric",
-      website: "https://quaric.com",
-      experienceId: "quaric",
+      company: "Feathermark.io",
+      website: "https://feathermark.io",
+      experienceId: "feathermark",
     },
   ],
   about: `
-- Design Engineer with 5+ years of experience, known for pixel-perfect execution and strong attention to small details.
-- Passionate about exploring new technologies and turning ideas into reality through polished, thoughtfully crafted personal projects.
-- Creator of [chanhdai.com](https://github.com/ncdai/chanhdai.com) (1.6k stars), [React Wheel Picker](https://react-wheel-picker.chanhdai.com) (16k+ weekly downloads, ▲Vercel OSS Program), and [ZaDark](https://zadark.com) (80k+ downloads, 30k+ users) — peak metrics.
+- Full-Stack Developer with 4+ years of experience, most familiar with with the React.js / Next.js ecosystem - dabbling with Svelte + Phoenix (Elixir).
+- Passionate about learning the ins/outs of technologies and developing websites for clients and myself. 
+- Creator of [jaydingulley.me](https://github.com/jaydindg/jaydingulley.me), [feathermark.io](https://www.feathermark.io) ($15k+ facilitated in donations for non-profits), and more websites for clients.
 `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
+  avatar: "https://assets.jaydingulley.me/images/jaydindg-avatar-ghibli.webp",
   ogImage:
     "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?v=8",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
-  timeZone: "Asia/Ho_Chi_Minh",
+  timeZone: "America/Chicago",
   keywords: [
-    "ncdai",
-    "nguyenchanhdai",
-    "nguyen chanh dai",
-    "chanhdai",
-    "chanh dai",
-    "iamncdai",
+    "jaydindg",
+    "jaydingulley",
+    "jaydin gulley",
+    "iamjaydindg",
     "quaric",
     "zadark",
-    "nguyễn chánh đại",
-    "chánh đại",
+    "Jaydin Gulley",
   ],
   dateCreated: "2023-10-20", // YYYY-MM-DD
 }

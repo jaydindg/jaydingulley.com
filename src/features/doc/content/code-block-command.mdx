@@ -10,7 +10,7 @@ updatedAt: 2026-04-06
 
 <ComponentPreview
   name="code-block-command-demo"
-  openInV0Url="https://chanhdai.com/r/code-block-command.json"
+  openInV0Url="https://jaydingulley.me/r/code-block-command.json"
 />
 
 ## Features
@@ -30,7 +30,7 @@ updatedAt: 2026-04-06
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add @ncdai/code-block-command
+npx shadcn@latest add @jaydindg/code-block-command
 ```
 
 </TabsContent>
@@ -56,7 +56,7 @@ npm install clsx tailwind-merge class-variance-authority lucide-react motion jot
 
 <Step>Install the required components</Step>
 
-- [Copy Button](https://chanhdai.com/components/copy-button)
+- [Copy Button](https://jaydingulley.me/components/copy-button)
 
 <Step>Copy and paste the following code into your project</Step>
 
@@ -91,11 +91,11 @@ import {
 
 ```tsx
 <CodeBlockCommand
-  prompt="Add the @ncdai/code-block-command component to my project"
-  pnpm="pnpm dlx shadcn add @ncdai/code-block-command"
-  yarn="yarn dlx shadcn add @ncdai/code-block-command"
-  npm="npx shadcn add @ncdai/code-block-command"
-  bun="bunx --bun shadcn add @ncdai/code-block-command"
+  prompt="Add the @jaydindg/code-block-command component to my project"
+  pnpm="pnpm dlx shadcn add @jaydindg/code-block-command"
+  yarn="yarn dlx shadcn add @jaydindg/code-block-command"
+  npm="npx shadcn add @jaydindg/code-block-command"
+  bun="bunx --bun shadcn add @jaydindg/code-block-command"
 />
 ```
 
@@ -103,8 +103,8 @@ Or use `convertNpmCommand` to auto-convert from a standard npm command:
 
 ```tsx
 <CodeBlockCommand
-  prompt="Add the @ncdai/code-block-command component to my project"
-  {...convertNpmCommand("npx shadcn add @ncdai/code-block-command")}
+  prompt="Add the @jaydindg/code-block-command component to my project"
+  {...convertNpmCommand("npx shadcn add @jaydindg/code-block-command")}
 />
 ```
 
@@ -154,7 +154,7 @@ Track user interactions with analytics services like [PostHog](https://posthog.c
 
 ```tsx showLineNumbers {3,12}
 <CodeBlockCommand
-  {...convertNpmCommand("npx shadcn add @ncdai/code-block-command")}
+  {...convertNpmCommand("npx shadcn add @jaydindg/code-block-command")}
   onCopySuccess={({ packageManager, command }) => {
     trackEvent({
       name: "command_copied",

@@ -54,7 +54,7 @@ export function SiteHeader() {
 
           <div className="flex items-center *:first:mr-2 max-sm:*:data-[slot=command-menu-trigger]:hidden">
             <CommandMenu docs={docPreviews} blocks={blocks} enabledHotkeys />
-            <NavItemGitHub />
+            {/* <NavItemGitHub /> */}
             <Separator
               orientation="vertical"
               className="mx-2 data-vertical:h-4 data-vertical:self-center"

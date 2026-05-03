@@ -22,7 +22,7 @@ const CARDS = [
   {
     name: "shadcn",
     handle: "@shadcn",
-    avatar: "https://unavatar.io/x/shadcn",
+    avatar: "https://unavatar.io/linkedin/user:alizjah-jarvis",
   },
   {
     name: "Evil Rabbit",
@@ -55,7 +55,7 @@ const CARDS = [
     avatar: "https://unavatar.io/x/aaronmahlke",
   },
   {
-    name: "Chánh Đại",
+    name: "Jaydin Gulley",
     handle: "@iamncdai",
     avatar: "https://unavatar.io/x/iamncdai",
   },

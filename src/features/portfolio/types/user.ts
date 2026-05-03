@@ -38,7 +38,7 @@ export type User = {
   namePronunciationUrl: string
   /** SEO keywords list for metadata */
   keywords: string[]
-  /** Time zone in IANA format (e.g., "Asia/Ho_Chi_Minh") */
+  /** Time zone in IANA format (e.g., "America/Chicago") */
   timeZone: string
   /** Profile/site start date in YYYY-MM-DD */
   dateCreated: string

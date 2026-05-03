@@ -52,7 +52,7 @@ export const styles: Registry["items"] = [
         },
       },
     },
-    docs: "https://chanhdai.com/components/theme-toggle-effect",
+    docs: "https://jaydingulley.me/components/theme-toggle-effect",
   },
   {
     name: "theme-toggle-effect-circle-blur",
@@ -89,7 +89,7 @@ export const styles: Registry["items"] = [
         },
       },
     },
-    docs: "https://chanhdai.com/components/theme-toggle-effect",
+    docs: "https://jaydingulley.me/components/theme-toggle-effect",
   },
   {
     name: "theme-toggle-effect-circle-blur-top-left",
@@ -125,7 +125,7 @@ export const styles: Registry["items"] = [
         },
       },
     },
-    docs: "https://chanhdai.com/components/theme-toggle-effect",
+    docs: "https://jaydingulley.me/components/theme-toggle-effect",
   },
   {
     name: "theme-toggle-effect-polygon",
@@ -173,7 +173,7 @@ export const styles: Registry["items"] = [
         },
       },
     },
-    docs: "https://chanhdai.com/components/theme-toggle-effect",
+    docs: "https://jaydingulley.me/components/theme-toggle-effect",
   },
   {
     name: "theme-toggle-effect-polygon-gradient",
@@ -208,6 +208,6 @@ export const styles: Registry["items"] = [
         },
       },
     },
-    docs: "https://chanhdai.com/components/theme-toggle-effect",
+    docs: "https://jaydingulley.me/components/theme-toggle-effect",
   },
 ]

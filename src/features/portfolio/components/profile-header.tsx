@@ -2,7 +2,6 @@ import { USER } from "@/features/portfolio/data/user"
 import { TextFlip } from "@/registry/components/text-flip"
 
 import { AvatarElectricEffect } from "./avatar-electric-effect"
-import { PronounceMyName } from "./pronounce-my-name"
 import { VerifiedIcon } from "./verified-icon"
 
 export function ProfileHeader() {
@@ -36,7 +35,7 @@ export function ProfileHeader() {
 
         <div className="border-t border-line">
           <div className="flex items-center gap-2 pl-4">
-            <h1 className="-translate-y-px text-3xl font-semibold tracking-tight">
+            <h1 className="-translate-y-px text-3xl font-semibold tracking-tight font-barkeliy">
               {USER.displayName}
             </h1>
 
@@ -45,11 +44,11 @@ export function ProfileHeader() {
               aria-label="Verified"
             />
 
-            {USER.namePronunciationUrl && (
+            {/* {USER.namePronunciationUrl && (
               <PronounceMyName
                 namePronunciationUrl={USER.namePronunciationUrl}
               />
-            )}
+            )} */}
           </div>
 
           <div className="h-12.5 border-t border-line py-1 pl-4 sm:h-9">

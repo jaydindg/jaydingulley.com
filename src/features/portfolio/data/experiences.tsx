@@ -3,88 +3,61 @@ import {
   DraftingCompassIcon,
   GraduationCapIcon,
   LightbulbIcon,
+  StarIcon,
+  UserStar,
+  WarehouseIcon,
 } from "lucide-react"
 
 import type { Experience } from "../types/experiences"
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: "shadcncraft",
-    companyName: "shadcncraft",
-    companyLogo: "https://assets.chanhdai.com/images/companies/shadcncraft.svg",
-    companyWebsite: "https://shadcncraft.com",
-    positions: [
-      {
-        id: "1",
-        title: "Design Engineer",
-        employmentPeriod: {
-          start: "01.2026",
-        },
-        employmentType: "Full-time",
-        icon: <CodeXmlIcon />,
-        description:
-          "- Work on the registry and React component library.\n- Design and build Pro application components and blocks, from Figma to production-ready React.",
-        skills: [
-          "TypeScript",
-          "Next.js",
-          "Tailwind CSS",
-          "shadcn/registry",
-          "Figma",
-        ],
-        isExpanded: true,
-      },
-    ],
-    isCurrentEmployer: true,
-  },
-  {
-    id: "quaric",
-    companyName: "Quaric",
-    companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
-    companyWebsite: "https://quaric.com",
+    id: "feathermark",
+    companyName: "Feathermark.io",
+    companyLogo: "https://assets.jaydingulley.me/images/companies/feathermark.svg",
+    companyWebsite: "https://feathermark.io",
     positions: [
       {
         id: "2",
-        title: "Design Engineer",
+        title: "Director of Technology",
         employmentPeriod: {
-          start: "03.2024",
+          start: "05.2023",
         },
         employmentType: "Part-time",
         icon: <CodeXmlIcon />,
-        description: `- Created Quaric Brand Identity.
-- Created the Quaric Design System to standardize design practices and accelerate development.
+        description: `- Created Feathermark Brand Identity.
+- Created the Feathermark Design System to standardize design practices and accelerate development.
 
-In-house Project: [Quaric Website](https://quaric.com)
-- Designed the UI/UX for Quaric Website, delivering a seamless experience.
-- Developed online ordering to streamline purchases.
-- Integrated VNPAY-QR for secure transactions.
-- Registered the e-commerce site with [online.gov.vn](http://online.gov.vn/website/chi-tiet-115855) for compliance.
+In-house Project: [Feathermark Website](https://www.feathermark.io)
+- Designed the UI/UX for Feathermark Website, delivering a seamless experience.
+- Developed online Demo scheduling to streamline bookings.
+- Designed a scroll-interactive layers section for main topics Feathermark focuses on.
 
-In-house Project: [ZaDark](https://zadark.com)
-- Build and maintain ZaDark.com with Docusaurus, integrating AdSense.
-- Develop and maintain the ZaDark extension for Zalo Web on Chrome, Safari, Edge, and Firefox — with 20k+ active users via Chrome Web Store (as of Sep 2025).`,
+Client Project: [NOFA Jeep Army](https://nofajeeparmy.org)
+- Build and maintain NOFA Jeepy Army's website with Next.js, integrating Stripe for donations.
+- Develop a system that allows registrations from hikers, tracking donations in for a real-time view, small prize system for hikers (Hike-A-Thon Event)
+- Develop and maintain the Sponsor management web application for board members to manage displayed sponsors on the website.`,
         skills: [
           "Next.js",
           "Strapi",
-          "Auth0",
-          "VNPAY-QR",
+          "Better Auth",
+          "Supabase",
           "Docker",
           "NGINX",
-          "Google Cloud",
-          "Docusaurus",
-          "Extension",
+          "Amazon Web Services",
+          "Stripe",
           "UI/UX Design",
           "UX Writing",
           "Design System",
           "Brand Design",
-          "Figma",
-          "Research",
+          "Search Engine Optimization",
         ],
       },
       {
         id: "1",
         title: "Founder",
         employmentPeriod: {
-          start: "03.2024",
+          start: "05.2023",
         },
         employmentType: "Part-time",
         icon: <LightbulbIcon />,
@@ -94,257 +67,147 @@ In-house Project: [ZaDark](https://zadark.com)
     isCurrentEmployer: true,
   },
   {
-    id: "simplamo",
-    companyName: "Simplamo",
-    companyLogo: "https://assets.chanhdai.com/images/companies/simplamo.webp",
+    id: "hotshots",
+    companyName: "HotShots",
+    companyLogo: "https://assets.jaydingulley.me/images/companies/hotshots.svg",
     positions: [
       {
-        id: "2",
-        title: "Senior Frontend Developer",
-        employmentPeriod: {
-          start: "10.2022",
-          end: "01.2026",
-        },
-        employmentType: "Full-time",
-        icon: <CodeXmlIcon />,
-        description: `- Built Tree & Gantt views features to improve goal organization, visibility, and progress tracking.
-- Developed [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
-- Developed [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.
-- Built and maintained the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.
-- Developed interactive chart and analytics widgets for the [Dashboard](https://help.simplamo.com/features/dashboard/overview) to enhance data visualization.
-- Developed and maintained core features to enhance functionality and user experience.
-- Ensured UI/UX consistency and adherence to standards.
-- Implemented robust frontend solutions for web and mobile platforms.
-- Analyzed technical capabilities and provided optimal solutions.`,
-        skills: [
-          "TypeScript",
-          "Next.js",
-          "React Native",
-          "MobX",
-          "MobX-State-Tree",
-          "Tailwind CSS",
-          "Dify",
-          "Zalo Mini App",
-          "Agile",
-          "Teamwork",
-          "Research",
-          "Problem-solving",
-        ],
-      },
-      {
         id: "1",
-        title: "UI Lead",
+        title: "Assistant Manager",
         employmentPeriod: {
-          start: "10.2022",
-          end: "01.2026",
+          start: "8.2025",
+          end: "9.2025",
         },
         employmentType: "Full-time",
-        icon: <DraftingCompassIcon />,
-        description: `- Ensured UI/UX consistency and high-quality standards.
-- Designed intuitive, user-focused interfaces aligned with business goals.
-- Defined and established a cohesive UI style for Simplamo.`,
-        skills: ["Creativity", "UI/UX Design", "Figma"],
+        icon: <UserStar />,
+        description: `As Assistant Manager, I was frontline help to staff, managed money, opens / closes, marketing, and promos.
+- Trainee for a month at Hotshots in St. Louis before moving to Decatur, IL to manage a franchise location. 
+- Truck orders and inventory checks, daily deposits and staff tip payouts, promo callouts. 
+- Customer Service: Establishing a helpful presence, handling complaints, gauging guest engagement. 
+- Frontline Help for Staff: Stepping in when staff needs me, handing food out, doing dishes, making drinks.`,
+        skills: [
+          "Customer Service",
+          "Management",
+          "Inventory",
+          "Closing / Opening Store",
+        ],
       },
     ],
   },
   {
-    id: "tungtung",
-    companyName: "Tung Tung",
-    companyLogo: "https://assets.chanhdai.com/images/companies/tungtung.webp",
+    id: "totalqualitylogistics",
+    companyName: "Total Quality Logistics (TQL)",
+    companyLogo: "https://assets.jaydingulley.me/images/companies/tql.svg",
     positions: [
       {
-        id: "3",
-        title: "Web Developer",
-        employmentPeriod: {
-          start: "2020",
-          end: "2022",
-        },
-        employmentType: "Full-time",
-        description: `- Built a scalable design system for consistency and efficiency.
-- Built a complex rich-text editor based on ProseMirror and Slate for customizable content creation.
-- Integrated APIs with the Backend Team to enhance functionality.`,
-        icon: <CodeXmlIcon />,
-        skills: [
-          "React",
-          "Redux",
-          "Storybook",
-          "Lerna",
-          "Agile",
-          "Teamwork",
-          "Research",
-        ],
-      },
-      {
         id: "2",
-        title: "Mobile Developer",
+        title: "Warehousing Associate",
         employmentPeriod: {
-          start: "2019",
-          end: "2020",
+          start: "2023",
+          end: "2023",
         },
         employmentType: "Full-time",
-        description: `- Rebuilt the app with React Native for better UX and performance.
-- Integrated MoMo and in-app purchases for seamless payments.
-- Optimized deployment for staging and production.
-- Published on App Store and Google Play, ensuring compliance.`,
-        icon: <CodeXmlIcon />,
+        description: `- Working with sales teams to find warehouses for their clients needs.
+- Sourcing warehouses that support different commodities (e.g. Dry, Cold, HazMat).
+- Cross-Docking / Transloads.`,
+        icon: <WarehouseIcon />,
         skills: [
-          "React Native",
-          "Redux",
-          "MoMo Payment API",
-          "App Store",
-          "Google Play Store",
-          "App Center",
-          "Agile",
-          "Teamwork",
-          "Research",
+          "Warehousing",
+          "Commodity Types",
+          "Cross-Docking & Transload Operations",
         ],
       },
       {
         id: "1",
-        title: "UI/UX Designer",
+        title: "Logistics Account Executive (LAE)",
         employmentPeriod: {
-          start: "2018",
-          end: "2019",
+          start: "2023",
+          end: "2023",
         },
         employmentType: "Full-time",
-        description: `- Designed a Landing Page for enterprise clients.
-- Redesigned the Online Quiz Platform for a modern look on web and mobile.
-- Redesigned the Pricing interface for individual customers.
-- Enhanced UX by improving usability, navigation, and user flow.`,
-        icon: <DraftingCompassIcon />,
-        skills: ["UI/UX Design", "Sketch"],
+        description: `- Prospecting and outbound calls, providing dispatch for trucks, supply chain management for clients.
+- Posing as the main point of contact for incoming calls for help from trucks and clients. 
+- Learning different modes of transportation: Domestic, Cross-Border, International, Drayage, etc.)
+- Urgent help on problems with trucks over the road: Transloads and finding new trucks due to breakdowns.
+- Warehousing: Finding warehouses of different types to store commodities for clients.`,
+        icon: <StarIcon />,
+        skills: ["Sales", "Customer Service", "Supply Chain", "Modes of Transportation", "Dispatching"],
       },
     ],
   },
-  {
-    id: "freelance",
-    companyName: "Freelance",
-    positions: [
-      {
-        id: "2",
-        title: "Full-stack Developer",
-        employmentPeriod: {
-          start: "2018",
-          end: "2020",
-        },
-        employmentType: "Part-time",
-        description: `- Built an order management website with real-time delivery tracking.
-- Developed an e-commerce site for bird’s nest products.
-- Created a map to display monitoring station data.
-- Designed a customizable WordPress landing page.`,
-        icon: <CodeXmlIcon />,
-        skills: [
-          "Laravel",
-          "React",
-          "Express.js",
-          "Socket.IO",
-          "MongoDB",
-          "Firebase",
-          "WordPress",
-          "Docker",
-          "NGINX",
-        ],
-      },
-      {
-        id: "1",
-        title: "Graphic & UI/UX Designer",
-        employmentPeriod: {
-          start: "2018",
-          end: "2019",
-        },
-        employmentType: "Part-time",
-        description: "Designed logos, posters, ads, and UI.",
-        icon: <DraftingCompassIcon />,
-        skills: [
-          "Creativity",
-          "UI/UX Design",
-          "Graphic Design",
-          "Sketch",
-          "Adobe Photoshop",
-          "Adobe Illustrator",
-        ],
-      },
-    ],
-  },
+//   {
+//     id: "freelance",
+//     companyName: "Freelance",
+//     positions: [
+//       {
+//         id: "2",
+//         title: "Full-stack Developer",
+//         employmentPeriod: {
+//           start: "2018",
+//           end: "2020",
+//         },
+//         employmentType: "Part-time",
+//         description: `- Built an order management website with real-time delivery tracking.
+// - Developed an e-commerce site for bird’s nest products.
+// - Created a map to display monitoring station data.
+// - Designed a customizable WordPress landing page.`,
+//         icon: <CodeXmlIcon />,
+//         skills: [
+//           "Laravel",
+//           "React",
+//           "Express.js",
+//           "Socket.IO",
+//           "MongoDB",
+//           "Firebase",
+//           "WordPress",
+//           "Docker",
+//           "NGINX",
+//         ],
+//       },
+//       {
+//         id: "1",
+//         title: "Graphic & UI/UX Designer",
+//         employmentPeriod: {
+//           start: "2018",
+//           end: "2019",
+//         },
+//         employmentType: "Part-time",
+//         description: "Designed logos, posters, ads, and UI.",
+//         icon: <DraftingCompassIcon />,
+//         skills: [
+//           "Creativity",
+//           "UI/UX Design",
+//           "Graphic Design",
+//           "Sketch",
+//           "Adobe Photoshop",
+//           "Adobe Illustrator",
+//         ],
+//       },
+//     ],
+//   },
   {
     id: "education",
     companyName: "Education",
     positions: [
       {
-        id: "3",
-        title: "University of Science — VNUHCM",
+        id: "1",
+        title: "Columbia High School - Columbia, IL",
         employmentPeriod: {
           start: "08.2018",
-          end: "10.2026",
+          end: "05.2022",
         },
         icon: <GraduationCapIcon />,
-        description: `- Currently studying for a Bachelor’s degree in Information Systems.
-- Language Proficiency: B1 level in English (CEFR).
-- Achieved several awards, including:
-  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
-  - 2nd Prize — Business Startup Competition 2019`,
+        description: `- Student of the Columbia High School.
+- Computer class covering topics such as Microsoft Office, HTML / CSS / JavaScript.
+- Played on the Columbia High School Hockey Team.`,
         skills: [
-          "C++",
-          "Java",
-          "Python",
-          "PHP",
-          "DSA",
-          "Advanced Databases",
-          "Systems Design",
-          "Distributed Systems",
-          "Software Engineering",
-          "Teamwork",
+          "Welding",
+          "CAD",
+          "Microsoft Office",
+          "HTML",
+          "CSS",
+          "JavaScript",
         ],
-      },
-      {
-        id: "2",
-        title: "Ly Tu Trong High School for the Gifted — Can Tho City",
-        employmentPeriod: {
-          start: "08.2015",
-          end: "06.2018",
-        },
-        icon: <GraduationCapIcon />,
-        description: `- Student of the Specialized Computer Science Program.
-- Granted direct admission to university due to achieving 3rd Prize at the national level.
-- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:
-  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)
-  - 1st Prize — Can Tho City Science and Engineering Fair 2018
-  - Creativity Award — Binh Duong Hackathon 2017
-  - Consolation Prize — National Youth and Children’s Creativity Contest 2016
-  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children’s Creativity Contest 2016
-  - 3rd Prize — National Young Informatics Contest 2016
-- Achieved the title of Outstanding Student from Grade 10-12.
-- Selected for the National Excellent Student Contest in Informatics for two consecutive years during high school.
-- Honored on the school’s “Hall of Fame” for academic achievements.
-- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.
-- Developed websites based on Laravel framework.
-- Built websites with PHP and MySQL, following the MVC architecture.`,
-        skills: [
-          "Algorithms",
-          "C++",
-          "PHP",
-          "MySQL",
-          "Laravel",
-          "Node.js",
-          "Pandoc",
-        ],
-      },
-      {
-        id: "1",
-        title: "Thuan Hung Secondary School",
-        employmentPeriod: {
-          start: "08.2011",
-          end: "06.2015",
-        },
-        icon: <GraduationCapIcon />,
-        description: `- Recognized as the most outstanding student of the district.
-- Achieved numerous awards at city and national levels:
-  - Consolation Prize — National Young Informatics Contest 2015
-  - Consolation Prize — National Young Informatics Contest 2014
-  - 1st Prize — Can Tho City Young Informatics Contest 2014
-- Achieved the title of Outstanding Student from Grade 6-9.
-- Developed websites using the open-source NukeViet CMS.`,
-        skills: ["Pascal", "NukeViet", "HTML", "CSS", "JavaScript"],
       },
     ],
   },

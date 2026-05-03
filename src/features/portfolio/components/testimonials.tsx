@@ -59,7 +59,7 @@ export function Testimonials() {
         ))}
       </div>
 
-      <div className="flex h-2 w-full" />
+      {/* <div className="flex h-2 w-full" />
 
       <TestimonialList data={TESTIMONIALS_1} />
 
@@ -78,7 +78,7 @@ export function Testimonials() {
             <ArrowUpRightIcon />
           </a>
         </Button>
-      </div>
+      </div> */}
     </Panel>
   )
 }
