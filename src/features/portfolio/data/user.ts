@@ -39,7 +39,7 @@ export const USER: User = {
 `,
   avatar: "https://assets.jaydingulley.me/images/jaydindg-avatar-ghibli.webp",
   ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?v=8",
+    "https://assets.jaydingulley.me/images/screenshot-og-image-dark.png?v=8",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
   timeZone: "America/Chicago",
   keywords: [
@@ -51,5 +51,5 @@ export const USER: User = {
     "zadark",
     "Jaydin Gulley",
   ],
-  dateCreated: "2023-10-20", // YYYY-MM-DD
+  dateCreated: "2026-05-03", // YYYY-MM-DD
 }
