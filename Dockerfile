@@ -16,9 +16,13 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-# Copy standalone server
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+# Copy the entire .next folder
+COPY --from=builder /app/.next ./.next
+
+# Copy package.json for runtime
+COPY --from=builder /app/package.json ./package.json
+
+# Copy public assets
 COPY --from=builder /app/public ./public
 
 EXPOSE 3000
