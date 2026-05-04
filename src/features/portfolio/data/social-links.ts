@@ -4,19 +4,19 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "https://assets.jaydingulley.me/images/link-icons/x.webp?v=2",
     title: "X",
-    subtitle: "@iamncdai",
+    subtitle: "@jaydindg",
     href: "https://x.com/jaydindg",
   },
   {
     icon: "https://assets.jaydingulley.me/images/link-icons/github.webp?v=2",
     title: "GitHub",
-    subtitle: "ncdai",
+    subtitle: "jaydindg",
     href: "https://github.com/jaydindg",
   },
   {
     icon: "https://assets.jaydingulley.me/images/link-icons/linkedin.webp?v=2",
     title: "LinkedIn",
-    subtitle: "ncdai",
+    subtitle: "jaydindg",
     href: "https://linkedin.com/in/jaydin-gulley",
   },
   {
