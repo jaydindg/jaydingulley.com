@@ -4,7 +4,7 @@ FROM node:20 AS builder
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --cache .npm --prefer-offline --force
 
 COPY . .
 RUN npm run build
@@ -18,9 +18,6 @@ ENV NODE_ENV=production
 
 # Copy the entire .next folder
 COPY --from=builder /app/.next ./.next
-
-# Copy package.json for runtime
-COPY --from=builder /app/package.json ./package.json
 
 # Copy public assets
 COPY --from=builder /app/public ./public
