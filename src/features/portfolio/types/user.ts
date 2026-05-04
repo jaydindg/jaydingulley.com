@@ -6,8 +6,6 @@ export type User = {
   /** Handle/username used in links or mentions */
   username: string
   gender: "male" | "female" | "non-binary"
-  /** e.g. "he/him", "she/her", "they/them" */
-  pronouns: string
   bio: string
   /** Short phrases rotated in UI (e.g., homepage flip effect) */
   flipSentences: string[]

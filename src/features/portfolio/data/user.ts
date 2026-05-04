@@ -6,7 +6,6 @@ export const USER: User = {
   displayName: "Jaydin Gulley",
   username: "jaydindg",
   gender: "male",
-  pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
   flipSentences: [
     "Homelab Learner",

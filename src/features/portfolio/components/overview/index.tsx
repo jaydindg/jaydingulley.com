@@ -74,13 +74,6 @@ export function Overview() {
               </IntroItemLink>
             </IntroItemContent>
           </IntroItem>
-
-          <IntroItem>
-            <IntroItemIcon>{getGenderIcon(USER.gender)}</IntroItemIcon>
-            <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
-              {USER.pronouns}
-            </IntroItemContent>
-          </IntroItem>
         </div>
       </PanelContent>
     </Panel>
