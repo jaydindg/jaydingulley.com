@@ -65,36 +65,36 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: <JaydinGulleyMark />,
     shortcut: "GH",
   },
-  {
-    title: "Components",
-    href: "/components",
-    icon: <Icons.react />,
-    shortcut: "GC",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-    icon: <Icons.gridView />,
-    shortcut: "GB",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-    icon: <Icons.news />,
-    shortcut: "GL",
-  },
+  // {
+  //   title: "Components",
+  //   href: "/components",
+  //   icon: <Icons.react />,
+  //   shortcut: "GC",
+  // },
+  // {
+  //   title: "Blocks",
+  //   href: "/blocks",
+  //   icon: <Icons.gridView />,
+  //   shortcut: "GB",
+  // },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  //   icon: <Icons.news />,
+  //   shortcut: "GL",
+  // },
   {
     title: "Sponsors",
     href: "/sponsors",
     icon: <Icons.favourite />,
     shortcut: "GS",
   },
-  {
-    title: "Testimonials",
-    href: "/testimonials",
-    icon: <Icons.bookHeart />,
-    shortcut: "GT",
-  },
+  // {
+  //   title: "Testimonials",
+  //   href: "/testimonials",
+  //   icon: <Icons.bookHeart />,
+  //   shortcut: "GT",
+  // },
 ]
 
 const PORTFOLIO_LINKS: CommandLinkItem[] = [
@@ -118,26 +118,26 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     href: "/#projects",
     icon: <BoxIcon />,
   },
-  {
-    title: "Honors & Awards",
-    href: "/#awards",
-    icon: <AwardIcon />,
-  },
-  {
-    title: "Certifications",
-    href: "/#certs",
-    icon: <CircleCheckBigIcon />,
-  },
-  {
-    title: "Bookmarks",
-    href: "/#bookmarks",
-    icon: <BookmarkIcon />,
-  },
-  {
-    title: "Download vCard",
-    href: "/vcard",
-    icon: <DownloadIcon />,
-  },
+  // {
+  //   title: "Honors & Awards",
+  //   href: "/#awards",
+  //   icon: <AwardIcon />,
+  // },
+  // {
+  //   title: "Certifications",
+  //   href: "/#certs",
+  //   icon: <CircleCheckBigIcon />,
+  // },
+  // {
+  //   title: "Bookmarks",
+  //   href: "/#bookmarks",
+  //   icon: <BookmarkIcon />,
+  // },
+  // {
+  //   title: "Download vCard",
+  //   href: "/vcard",
+  //   icon: <DownloadIcon />,
+  // },
 ]
 
 const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
@@ -328,14 +328,14 @@ export function CommandMenu({
             onLinkSelect={handleOpenLink}
           />
 
-          <CommandLinkGroup
+          {/* <CommandLinkGroup
             heading="Components"
             links={componentLinks}
             fallbackIcon={<Icons.react />}
             onLinkSelect={handleOpenLink}
-          />
+          /> */}
 
-          <CommandLinkGroup
+          {/* <CommandLinkGroup
             heading="Blocks"
             links={blockLinks}
             fallbackIcon={<Icons.gridView />}
@@ -347,7 +347,7 @@ export function CommandMenu({
             links={blogLinks}
             fallbackIcon={<Icons.news />}
             onLinkSelect={handleOpenLink}
-          />
+          /> */}
 
           <CommandLinkGroup
             heading="Social Links"
@@ -419,12 +419,12 @@ export function CommandMenu({
             </CommandItem>
           </CommandGroup>
 
-          <CommandGroup heading="Interactive Features">
+          {/* <CommandGroup heading="Interactive Features">
             <CommandItem onSelect={handleToggleDuckFollower}>
               <MousePointer2Icon />
               Toggle Duck Follower
             </CommandItem>
-          </CommandGroup>
+          </CommandGroup> */}
 
           <CommandLinkGroup
             heading="Other"
