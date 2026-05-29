@@ -1,0 +1,440 @@
+---
+title: Talos HA Cluster on Proxmox with SecureBoot
+description: Building a 3-node HA Talos Kubernetes control plane (plus workers) on Proxmox VMs with UEFI SecureBoot enabled.
+category: infrastructure
+updated: true
+createdAt: 2026-05-24
+updatedAt: 2026-05-24
+---
+
+## Overview
+
+This guide walks through building a highly-available Talos Linux Kubernetes
+cluster on Proxmox virtual machines, with UEFI SecureBoot enabled on every node.
+
+The end result:
+
+- 3 control-plane nodes forming an etcd quorum
+- A shared control-plane VIP for the Kubernetes API
+- 1+ worker nodes for running workloads
+- SecureBoot enforced on every node, using Sidero Labs' signed images
+
+Talos has no SSH and no shell — every node is managed entirely through
+`talosctl` and the machine config. This is a feature: the OS is immutable and
+API-driven. It also means the machine config *is* the system, so most of the
+work is getting that config right.
+
+> This guide is written from a real build, including the mistakes. The
+> "Common pitfalls" sections are the parts worth reading twice.
+
+## Plan your addresses first
+
+Decide every IP before generating anything. Mixing addresses up mid-build is
+the single biggest source of confusion.
+
+| Role               | Hostname | IP address     |
+| ------------------ | -------- | -------------- |
+| API endpoint (VIP) | —        | 10.20.20.10    |
+| Control plane 1    | cp1      | 10.20.20.20    |
+| Control plane 2    | cp2      | 10.20.20.21    |
+| Control plane 3    | cp3      | 10.20.20.22    |
+| Worker 1           | worker1  | 10.20.20.30    |
+
+Rules:
+
+- The **VIP is a separate IP** from any node. It floats between the control-plane
+  nodes via etcd-backed election. `kubectl`, workers, and external clients all
+  talk to the VIP.
+- The VIP must **not** be in your DHCP pool and must not be assigned to anything.
+- Control-plane nodes should use **static IPs**. DHCP for control-plane nodes is
+  fragile — a lease change or an unreachable DHCP server can break the cluster.
+
+## The SecureBoot ISO
+
+Get the SecureBoot ISO from the Sidero Labs Image Factory. The URL encodes a
+schematic hash (your selected extensions/customizations) and a Talos version:
+
+```
+https://factory.talos.dev/image/<SCHEMATIC_HASH>/v1.13.1/metal-amd64-secureboot.iso
+```
+
+The matching installer image — which goes into the machine config — is:
+
+```
+factory.talos.dev/installer-secureboot/<SCHEMATIC_HASH>:v1.13.1
+```
+
+Both the ISO and the installer image must use the **same schematic hash and the
+same Talos version**. The ISO bootloader enrolls the SecureBoot keys into the
+UEFI firmware on first boot; the installer image is what gets written to disk.
+
+## Step 1 — Create the Proxmox VMs
+
+Repeat for every node (control plane and worker). The settings must be
+consistent across nodes.
+
+1. **BIOS:** set to **OVMF (UEFI)**. SeaBIOS will not work — SecureBoot requires
+   UEFI firmware.
+2. **EFI disk:** add an EFI Disk. Enable **Pre-Enroll keys** as appropriate, but
+   the Talos ISO will enroll its own keys when the firmware is in setup mode.
+3. **Machine type:** `q35` is recommended for UEFI.
+4. **Disk controller:** pick one and keep it identical across all nodes. This
+   determines the install disk path:
+   - SCSI / SATA → `/dev/sda`
+   - VirtIO Block → `/dev/vda`
+5. **CPU / RAM:** control-plane nodes are comfortable with 2 vCPU / 4 GB. Workers
+   depend on workload.
+6. **Network:** a single bridge with internet egress. Note the bridge name and
+   any VLAN tag — the node must be able to reach `factory.talos.dev` over HTTPS
+   *and* resolve DNS.
+7. **CD/DVD:** mount the SecureBoot ISO and set the VM to boot from it first.
+
+> **TPM note:** Proxmox VMs have no TPM by default. If you intend to use
+> TPM-based disk encryption later, add a **TPM State** device (version **2.0**)
+> now, while the VM is off. Adding it after install means rebuilding the node.
+
+### Common pitfall: SecureBoot not enrolling
+
+On first boot the UEFI firmware should be in **setup mode** so the ISO can
+auto-enroll the SecureBoot keys. If it does not enroll automatically, press
+`Esc` during boot to force the boot menu and choose
+`Enroll Secure Boot keys: auto`.
+
+## Step 2 — Boot the nodes into maintenance mode
+
+Boot every VM from the ISO. Each lands in **maintenance mode** and displays its
+IP on the Proxmox console. Maintenance mode is the only state where
+`talosctl ... --insecure` works — once a node has config applied, the API
+requires client certificates.
+
+Verify SecureBoot took, on any node:
+
+```bash
+talosctl -n <IP> get securitystate --insecure
+```
+
+```
+NODE   NAMESPACE   TYPE            ID              VERSION   SECUREBOOT
+       runtime     SecurityState   securitystate   1         true
+```
+
+`SECUREBOOT true` is what you want. While here, confirm the disk and interface
+names — do not assume them:
+
+```bash
+talosctl -n <IP> get disks --insecure   # /dev/sda vs /dev/vda
+talosctl -n <IP> get links --insecure   # interface name, e.g. ens18
+```
+
+Proxmox VMs typically enumerate the NIC as `ens18`, not `eth0`.
+
+## Step 3 — The VIP patch
+
+The control-plane VIP is configured **inside the v1alpha1 machine config**,
+under the network interface. It is *not* a separate document.
+
+> There is no `Layer2VIPConfig` kind in Talos. Guides that show one are wrong.
+> The VIP lives under `machine.network.interfaces[].vip`.
+
+```yaml
+# vip-patch.yaml
+machine:
+  network:
+    interfaces:
+      - interface: ens18
+        dhcp: false
+        vip:
+          ip: 10.20.20.10
+```
+
+Use `dhcp: false` here from the start. If you set `dhcp: true` and later switch
+nodes to static IPs via per-node patches, the DHCP route operator keeps running
+underneath the static config — producing a duplicate default route and endless
+DHCP-failure log spam. Harmless, but annoying, and avoidable.
+
+## Step 4 — Generate the cluster config
+
+Generate once. The endpoint is the **VIP**.
+
+```bash
+talosctl gen config talos-proxmox https://10.20.20.10:6443 \
+  --install-image=factory.talos.dev/installer-secureboot/<SCHEMATIC_HASH>:v1.13.1 \
+  --install-disk=/dev/sda \
+  --config-patch-control-plane @vip-patch.yaml
+```
+
+This produces:
+
+- `controlplane.yaml` — applied to **all** control-plane nodes
+- `worker.yaml` — applied to **all** worker nodes
+- `talosconfig` — your `talosctl` client config
+
+Notes:
+
+- `--install-image` **must** be the `installer-secureboot` image, or the node
+  installs an unsigned image and SecureBoot fails.
+- `--config-patch-control-plane` applies the patch to control-plane nodes only —
+  the VIP belongs to the control plane, never to workers.
+- The generated config contains the cluster's CA certs, etcd CA, tokens, and
+  cluster secrets. **Never run `gen config` again for a running cluster** — it
+  generates fresh secrets that the existing nodes will not trust.
+
+## Step 5 — Per-node network patches
+
+Each node needs its own static address. These are small patches applied on top
+of the base config at apply time.
+
+```yaml
+# cp1-patch.yaml
+machine:
+  network:
+    interfaces:
+      - interface: ens18
+        dhcp: false
+        addresses:
+          - 10.20.20.20/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 10.20.20.1
+    nameservers:
+      - 1.1.1.1
+      - 8.8.8.8
+        vip:
+          ip: 10.20.20.10
+```
+
+Make `cp2-patch.yaml` and `cp3-patch.yaml` the same, changing only the address
+(`10.20.20.21`, `10.20.20.22`).
+
+For the worker, the same idea but **no `vip:` block** — the VIP is control-plane
+only:
+
+```yaml
+# worker1-patch.yaml
+machine:
+  network:
+    interfaces:
+      - interface: ens18
+        dhcp: false
+        addresses:
+          - 10.20.20.30/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 10.20.20.1
+    nameservers:
+      - 1.1.1.1
+      - 8.8.8.8
+```
+
+### Common pitfall: the hostname conflict
+
+`talosctl gen config` includes a `HostnameConfig` document (`auto: stable`) in
+the generated config. If a per-node patch *also* sets
+`machine.network.hostname`, the apply fails:
+
+```
+* static hostname is already set in v1alpha1 config
+```
+
+The fix: **do not put `hostname:` in the per-node patches.** Let `auto: stable`
+name the nodes. If you specifically want names like `cp1`/`worker1`, set them
+with a dedicated `HostnameConfig` document instead of the v1alpha1 field — and
+do that as a later polish step, not during the initial build.
+
+### Common pitfall: DNS and the install image
+
+A node that cannot resolve DNS or reach the internet will hang on
+`STAGE Installing` forever — it cannot pull the installer image from
+`factory.talos.dev`. If the gateway does not serve DNS, point `nameservers` at
+a real resolver (`1.1.1.1`, `8.8.8.8`). Confirm the VM's Proxmox bridge has
+actual internet egress.
+
+## Step 6 — Apply config to the control-plane nodes
+
+For a node **in maintenance mode**, use `--insecure`:
+
+```bash
+talosctl -n 10.20.20.20 apply-config --insecure -f controlplane.yaml --config-patch @cp1-patch.yaml
+talosctl -n 10.20.20.21 apply-config --insecure -f controlplane.yaml --config-patch @cp2-patch.yaml
+talosctl -n 10.20.20.22 apply-config --insecure -f controlplane.yaml --config-patch @cp3-patch.yaml
+```
+
+Each node installs Talos to disk and reboots. **Detach the ISO** from each VM
+afterward (Proxmox → Hardware → CD/DVD → Do not use any media), or it boots
+back into maintenance mode.
+
+### Common pitfall: certificate required
+
+If `--insecure` returns:
+
+```
+error reading server preface: remote error: tls: certificate required
+```
+
+the node is **not** in maintenance mode — it already has config applied. Re-apply
+with cert authentication instead (drop `--insecure`, add `--talosconfig`):
+
+```bash
+talosctl --talosconfig ./talosconfig -n 10.20.20.20 \
+  apply-config -f controlplane.yaml --config-patch @cp1-patch.yaml
+```
+
+`apply-config` is idempotent — re-applying a corrected config is safe. If a node
+is in a genuinely broken state, the clean reset is to reboot it from the ISO
+back into maintenance mode and start fresh. Do not delete the VM.
+
+## Step 7 — Point talosctl at the cluster
+
+Set the client config once so you stop juggling `--talosconfig` and relative
+paths:
+
+```bash
+export TALOSCONFIG=~/talos/talosconfig
+talosctl config endpoint 10.20.20.20 10.20.20.21 10.20.20.22
+talosctl config node 10.20.20.20
+```
+
+Listing all three control-plane IPs as endpoints means `talosctl` keeps working
+even if one node is down.
+
+## Step 8 — Bootstrap etcd (exactly once)
+
+Wait for the control-plane nodes to come back up from disk, then bootstrap etcd
+**once, on a single node only**:
+
+```bash
+talosctl -n 10.20.20.20 bootstrap
+```
+
+> Running `bootstrap` more than once is destructive to etcd. The first node
+> initializes etcd; the other two join the existing cluster automatically.
+
+## Step 9 — Verify the control plane
+
+```bash
+talosctl -n 10.20.20.20 etcd members
+talosctl -n 10.20.20.20 health --wait-timeout 10m
+```
+
+`etcd members` should list all three nodes with `LEARNER false`:
+
+```
+NODE          ID                 HOSTNAME   PEER URLS
+10.20.20.20   43d6504141a29097   cp1        https://10.20.20.20:2380
+10.20.20.20   a1638d32070949a9   cp2        https://10.20.20.21:2380
+10.20.20.20   0af45599d477f52e   cp3        https://10.20.20.22:2380
+```
+
+Pull the kubeconfig and check the nodes:
+
+```bash
+talosctl -n 10.20.20.20 kubeconfig .
+kubectl --kubeconfig ./kubeconfig get nodes
+```
+
+```
+NAME   STATUS   ROLES           AGE   VERSION
+cp1    Ready    control-plane   38m   v1.36.0
+cp2    Ready    control-plane   38m   v1.36.0
+cp3    Ready    control-plane   38m   v1.36.0
+```
+
+## Step 10 — Add worker nodes
+
+Workers are simpler — no VIP, no bootstrap.
+
+1. Create the VM exactly as in Step 1 (OVMF, SecureBoot, matching disk
+   controller). Boot the same SecureBoot ISO.
+2. Apply the worker config — `--insecure` for a fresh node in maintenance mode:
+
+   ```bash
+   talosctl -n 10.20.20.30 apply-config --insecure -f worker.yaml --config-patch @worker1-patch.yaml
+   ```
+
+3. Detach the ISO after the install reboot.
+
+The worker contacts the API at the VIP and joins automatically. It appears in
+`kubectl get nodes` with `ROLES <none>` — that is correct for a worker, not an
+error.
+
+```
+NAME      STATUS   ROLES           AGE   VERSION
+worker1   Ready    <none>          10m   v1.36.0
+```
+
+## Optional — TPM disk encryption
+
+Talos can encrypt the `ephemeral` and `state` partitions with LUKS2, sealing the
+key to a TPM 2.0 device:
+
+```yaml
+# tpm-disk-encryption.yaml
+machine:
+  systemDiskEncryption:
+    ephemeral:
+      provider: luks2
+      keys:
+        - slot: 0
+          tpm: {}
+    state:
+      provider: luks2
+      keys:
+        - slot: 0
+          tpm: {}
+```
+
+Read this before using it:
+
+- The patch only takes effect **at install time**. Applying it to an
+  already-installed node does not encrypt the existing disk — you would have to
+  wipe and reinstall every node.
+- It requires a **virtual TPM 2.0 device** on every Proxmox VM (added while the
+  VM is off).
+- Once the key is sealed to the TPM, changes to the VM firmware or boot chain,
+  or loss of the vTPM state, can leave the node **unable to decrypt its disk**.
+
+This is production-grade hardening with production-grade failure modes. If you
+want it, plan it into the build from Step 1 — do not bolt it on afterward.
+
+## After the cluster is up
+
+A fresh cluster is bare. Useful next steps, roughly in priority order:
+
+- **etcd backups** — `talosctl -n 10.20.20.20 etcd snapshot db.snapshot`, ideally
+  on a schedule. The single highest-value safety net.
+- **Storage / CSI** — without one, pods cannot persist data. Longhorn (replicated
+  block storage) or local-path-provisioner (simple node-local) are common.
+- **LoadBalancer** — bare-metal clusters have no cloud LB. MetalLB or Cilium's L2
+  announcement feature hand LAN IPs to `LoadBalancer` services.
+- **Ingress controller** — ingress-nginx or Traefik for hostname/path-based HTTP
+  routing and TLS, usually behind a single LoadBalancer IP.
+- **CNI** — Talos ships flannel by default, which is fine for basic pod
+  networking. Cilium (eBPF-based) is worth a deliberate switch only if you want
+  network policies or traffic observability; swapping CNI on a running cluster
+  is disruptive.
+
+## Quick reference
+
+| Situation                          | Command flag                              |
+| ---------------------------------- | ----------------------------------------- |
+| Node in maintenance mode           | `apply-config --insecure`                 |
+| Node already configured            | `apply-config` + `--talosconfig`           |
+| Reset a broken node                | reboot from ISO → maintenance mode         |
+| Bootstrap etcd                     | once, one node only                       |
+| Verify etcd                        | `talosctl etcd members`                    |
+| Verify cluster health              | `talosctl health --wait-timeout 10m`       |
+
+## Pitfall summary
+
+- `Layer2VIPConfig` is not a real Talos kind — VIP goes under
+  `machine.network.interfaces[].vip`.
+- Do not set `hostname:` in per-node patches — it conflicts with the generated
+  `HostnameConfig`.
+- Use `dhcp: false` from the start — mixing `dhcp: true` base with static patches
+  leaves a duplicate route and DHCP log spam.
+- `tls: certificate required` means the node is no longer in maintenance mode —
+  use cert auth, not `--insecure`.
+- Never re-run `gen config` for a running cluster — it creates new secrets.
+- Run `bootstrap` exactly once, on one node.
+- Always detach the ISO after install, or the node reboots into maintenance mode.
+- A node stuck on `Installing` almost always has broken DNS or no internet egress.
