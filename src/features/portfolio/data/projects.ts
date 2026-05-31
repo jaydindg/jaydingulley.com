@@ -70,6 +70,25 @@ export const PROJECTS: Project[] = [
     logo: "https://assets.jaydingulley.me/images/project-logos/feathermark.svg",
   },
   {
+    id: "palmguard",
+    title: "palmguardk9.com",
+    period: {
+      start: "05.2026",
+    },
+    link: "https://palmguardk9.com",
+    skills: [
+      "Client Project",
+      "Next.js 16",
+      "AWS SES",
+      "NGINX",
+      "Docker",
+      "Docker Compose",
+    ],
+    // description:
+    //   "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
+    logo: 'https://assets.jaydingulley.me/images/project-logos/palmguardk9.ico',
+  },
+  {
     id: "balmncalm",
     title: "balmncalm.com",
     period: {
@@ -95,12 +114,31 @@ export const PROJECTS: Project[] = [
     logo: "https://assets.jaydingulley.me/images/project-logos/balmncalmcom.ico",
   },
   {
-    id: "sengkelogistics",
-    title: "sengkelogistics.com",
+    id: "candycottage",
+    title: "cottagecandy.com",
     period: {
       start: "07.2025",
     },
-    link: "https://github.com/ncdai/qabox",
+    link: "https://cottagecandy.com",
+    skills: [
+      "Client Project",
+      "Next.js 16",
+      "AWS SES",
+      "NGINX",
+      "Docker",
+      "Docker Compose",
+    ],
+    // description:
+    //   "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
+    logo: 'https://assets.jaydingulley.me/images/project-logos/candycottage.ico',
+  },
+  {
+    id: "sengkelogistics",
+    title: "sengkelogistics.com",
+    period: {
+      start: "11.2025",
+    },
+    link: "https://sengkelogistics.com",
     skills: [
       "Client Project",
       "Next.js 16",
