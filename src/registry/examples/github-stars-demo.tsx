@@ -1,5 +1,5 @@
 import { GitHubStars } from "@/registry/components/github-stars"
 
 export default function GitHubStarsDemo() {
-  return <GitHubStars repo="ncdai/jaydingulley.me" stargazersCount={1560} />
+  return <GitHubStars repo="ncdai/jaydingulley.com" stargazersCount={1560} />
 }

@@ -15,7 +15,7 @@ export const USER: User = {
   address: "St. Louis, Missouri, USA",
   phoneNumber: "KzEgKDYxOCkgNDcwLTkzMjk=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "amF5ZGluLmd1bGxleUBvdXRsb29rLmNvbQ==", // base64 encoded
-  website: "https://jaydingulley.me",
+  website: "https://jaydingulley.com",
   jobTitle: "Full-Stack Developer",
   jobs: [
     {
@@ -34,11 +34,11 @@ export const USER: User = {
   about: `
 - Full-Stack Developer with 4+ years of experience, most familiar with with the React.js / Next.js ecosystem - dabbling with Svelte + Phoenix (Elixir).
 - Passionate about learning the ins/outs of technologies and developing websites for clients and myself. 
-- Creator of [jaydingulley.me](https://github.com/jaydindg/jaydingulley.me), [feathermark.io](https://www.feathermark.io) ($15k+ facilitated in donations for non-profits), and more websites for clients.
+- Creator of [jaydingulley.com](https://github.com/jaydindg/jaydingulley.com), [feathermark.io](https://www.feathermark.io) ($15k+ facilitated in donations for non-profits), and more websites for clients.
 `,
-  avatar: "https://assets.jaydingulley.me/images/jaydindg-avatar-ghibli.webp",
+  avatar: "https://assets.jaydingulley.com/images/jaydindg-avatar-ghibli.webp",
   ogImage:
-    "https://assets.jaydingulley.me/images/screenshot-og-image-dark.png?v=8",
+    "https://assets.jaydingulley.com/images/screenshot-og-image-dark.png?v=8",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
   timeZone: "America/Chicago",
   keywords: [

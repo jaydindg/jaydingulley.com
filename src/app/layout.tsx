@@ -79,16 +79,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "https://assets.jaydingulley.me/images/favicon.ico",
+        url: "https://assets.jaydingulley.com/images/favicon.ico",
         sizes: "any",
       },
       {
-        url: "https://assets.jaydingulley.me/images/favicon.svg",
+        url: "https://assets.jaydingulley.com/images/favicon.svg",
         type: "image/svg+xml",
       },
     ],
     apple: {
-      url: "https://assets.jaydingulley.me/images/apple-touch-icon.png",
+      url: "https://assets.jaydingulley.com/images/apple-touch-icon.png",
       type: "image/png",
       sizes: "180x180",
     },

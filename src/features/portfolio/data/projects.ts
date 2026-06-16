@@ -25,16 +25,16 @@ export const PROJECTS: Project[] = [
 // - Unstyled core for complete style customization
 // - Full keyboard navigation and type-ahead search
 // `,
-    logo: "https://assets.jaydingulley.me/images/project-logos/nofa.webp",
+    logo: "https://assets.jaydingulley.com/images/project-logos/nofa.webp",
     isExpanded: true,
   },
   {
     id: "jaydingulleyme",
-    title: "jaydingulley.me",
+    title: "jaydingulley.com",
     period: {
       start: "04.2026",
     },
-    link: "https://github.com/jaydindg/jaydingulley.me",
+    link: "https://github.com/jaydindg/jaydingulley.com",
     skills: [
       "Personal Project",
       "Open Source",
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
     ],
     description:
       "A minimal, pixel-perfect dev portfolio, shadcn registry, and blog.",
-    logo: "https://assets.jaydingulley.me/images/project-logos/jaydingulleycom.svg",
+    logo: "https://assets.jaydingulley.com/images/project-logos/jaydingulleycom.svg",
   },
   {
     id: "feathermarkio",
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
       "Docker Compose",
       "NGINX",
     ],
-    logo: "https://assets.jaydingulley.me/images/project-logos/feathermark.svg",
+    logo: "https://assets.jaydingulley.com/images/project-logos/feathermark.svg",
   },
   {
     id: "palmguard",
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     ],
     // description:
     //   "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
-    logo: 'https://assets.jaydingulley.me/images/project-logos/palmguardk9.ico',
+    logo: 'https://assets.jaydingulley.com/images/project-logos/palmguardk9.ico',
   },
   {
     id: "balmncalm",
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
 
 // <p class="text-muted-foreground">* Peak metrics.</p>
 // `,
-    logo: "https://assets.jaydingulley.me/images/project-logos/balmncalmcom.ico",
+    logo: "https://assets.jaydingulley.com/images/project-logos/balmncalmcom.ico",
   },
   {
     id: "candycottage",
@@ -130,7 +130,7 @@ export const PROJECTS: Project[] = [
     ],
     // description:
     //   "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
-    logo: 'https://assets.jaydingulley.me/images/project-logos/candycottage.ico',
+    logo: 'https://assets.jaydingulley.com/images/project-logos/candycottage.ico',
   },
   {
     id: "sengkelogistics",
@@ -149,7 +149,7 @@ export const PROJECTS: Project[] = [
     ],
     // description:
     //   "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
-    logo: 'https://assets.jaydingulley.me/images/project-logos/sengkelogisticscom.ico',
+    logo: 'https://assets.jaydingulley.com/images/project-logos/sengkelogisticscom.ico',
   },
 //   {
 //     id: "taskbox",

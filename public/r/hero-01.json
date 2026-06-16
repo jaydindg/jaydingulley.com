@@ -6,7 +6,7 @@
   "description": "A hero section with a golden spiral background.",
   "registryDependencies": [
     "button",
-    "https://jaydingulley.me/r/style.json"
+    "https://jaydingulley.com/r/style.json"
   ],
   "files": [
     {

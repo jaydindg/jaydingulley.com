@@ -6,9 +6,9 @@
   "description": "Scrolling marquee to showcase user testimonials.",
   "registryDependencies": [
     "@kibo-ui/marquee",
-    "https://jaydingulley.me/r/testimonial.json"
+    "https://jaydingulley.com/r/testimonial.json"
   ],
   "files": [],
-  "docs": "https://jaydingulley.me/components/testimonials-marquee",
+  "docs": "https://jaydingulley.com/components/testimonials-marquee",
   "type": "registry:component"
 }

@@ -1,4 +1,4 @@
-# AI Agent Guidelines for jaydingulley.me
+# AI Agent Guidelines for jaydingulley.com
 
 Next.js 16 (App Router) portfolio, blog, and shadcn registry website.
 

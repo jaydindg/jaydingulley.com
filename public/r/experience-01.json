@@ -5,8 +5,8 @@
   "author": "ncdai <jaydin.gulley@outlook.com>",
   "description": "A work experience section with a lined layout.",
   "registryDependencies": [
-    "https://jaydingulley.me/r/style.json",
-    "https://jaydingulley.me/r/work-experience.json"
+    "https://jaydingulley.com/r/style.json",
+    "https://jaydingulley.com/r/work-experience.json"
   ],
   "files": [
     {

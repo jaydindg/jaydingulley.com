@@ -16,7 +16,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/theme-switcher",
+    docs: "https://jaydingulley.com/components/theme-switcher",
   },
   {
     name: "text-flip",
@@ -31,7 +31,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/text-flip",
+    docs: "https://jaydingulley.com/components/text-flip",
   },
   {
     name: "apple-hello-effect",
@@ -45,7 +45,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/apple-hello-effect",
+    docs: "https://jaydingulley.com/components/apple-hello-effect",
   },
   {
     name: "apple-hello-effect-hindi",
@@ -59,7 +59,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/apple-hello-effect",
+    docs: "https://jaydingulley.com/components/apple-hello-effect",
   },
   {
     name: "apple-hello-effect-spanish",
@@ -73,7 +73,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/apple-hello-effect",
+    docs: "https://jaydingulley.com/components/apple-hello-effect",
   },
   {
     name: "apple-hello-effect-vietnamese",
@@ -87,7 +87,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/apple-hello-effect",
+    docs: "https://jaydingulley.com/components/apple-hello-effect",
   },
   {
     name: "wheel-picker",
@@ -102,7 +102,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/react-wheel-picker",
+    docs: "https://jaydingulley.com/components/react-wheel-picker",
   },
   {
     name: "chevrons-up-down-icon",
@@ -155,7 +155,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/work-experience-component",
+    docs: "https://jaydingulley.com/components/work-experience-component",
   },
   {
     name: "shimmering-text",
@@ -184,7 +184,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/slide-to-unlock",
+    docs: "https://jaydingulley.com/components/slide-to-unlock",
   },
   {
     name: "testimonials-marquee",
@@ -195,7 +195,7 @@ export const components: Registry["items"] = [
       "@kibo-ui/marquee",
       getRegistryItemUrl("testimonial"),
     ],
-    docs: "https://jaydingulley.me/components/testimonials-marquee",
+    docs: "https://jaydingulley.com/components/testimonials-marquee",
   },
   {
     name: "testimonial",
@@ -425,7 +425,7 @@ export const components: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    docs: "https://jaydingulley.me/components/middle-truncation",
+    docs: "https://jaydingulley.com/components/middle-truncation",
   },
   {
     name: "twemoji",
@@ -453,6 +453,6 @@ export const components: Registry["items"] = [
         },
       },
     },
-    docs: "https://jaydingulley.me/components/twemoji",
+    docs: "https://jaydingulley.com/components/twemoji",
   },
 ]

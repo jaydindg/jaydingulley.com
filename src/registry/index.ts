@@ -9,7 +9,7 @@ import { styles } from "./styles/_registry"
 
 export const registry = {
   name: "ncdai",
-  homepage: "https://jaydingulley.me/components",
+  homepage: "https://jaydingulley.com/components",
   items: [
     ...lib,
     ...hook,

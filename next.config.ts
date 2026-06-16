@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "assets.jaydingulley.me",
+        hostname: "assets.jaydingulley.com",
         port: "",
       },
       {

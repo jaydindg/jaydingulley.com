@@ -3,7 +3,7 @@ import { getAllDocs } from "@/features/doc/data/documents"
 
 const allPosts = getAllDocs()
 
-const content = `# jaydingulley.me
+const content = `# jaydingulley.com
 
 > A minimal, pixel-perfect dev portfolio, shadcn registry, and blog to showcase my work as a Design Engineer.
 

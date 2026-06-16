@@ -51,7 +51,7 @@ export function SiteFooter() {
 
             {/* <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href="https://x.com/iamncdai?utm_source=jaydingulley.me"
+              href="https://x.com/iamncdai?utm_source=jaydingulley.com"
               target="_blank"
               rel="noopener"
               aria-label="X"
@@ -63,7 +63,7 @@ export function SiteFooter() {
 
             <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href="https://github.com/jaydindg?utm_source=jaydingulley.me"
+              href="https://github.com/jaydindg?utm_source=jaydingulley.com"
               target="_blank"
               rel="noopener"
               aria-label="GitHub"
@@ -75,7 +75,7 @@ export function SiteFooter() {
 
             <a
               className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href="https://www.linkedin.com/in/jaydin-gulley?utm_source=jaydingulley.me"
+              href="https://www.linkedin.com/in/jaydin-gulley?utm_source=jaydingulley.com"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"

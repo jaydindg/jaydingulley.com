@@ -15,7 +15,7 @@ export default function MiddleTruncationDemo() {
           <ExampleItem>
             <ExampleLabel>{`<MiddleTruncation>`}</ExampleLabel>
             <MiddleTruncation>
-              /Users/ncdai/Code/jaydingulley.me/src/components/ui/button.tsx
+              /Users/ncdai/Code/jaydingulley.com/src/components/ui/button.tsx
             </MiddleTruncation>
           </ExampleItem>
 
@@ -29,7 +29,7 @@ export default function MiddleTruncationDemo() {
           <ExampleItem>
             <ExampleLabel>{`<MiddleTruncation minEnd={12}>`}</ExampleLabel>
             <MiddleTruncation minEnd={12}>
-              /Users/ncdai/Code/jaydingulley.me/node_modules/shadcn/package.json
+              /Users/ncdai/Code/jaydingulley.com/node_modules/shadcn/package.json
             </MiddleTruncation>
           </ExampleItem>
 

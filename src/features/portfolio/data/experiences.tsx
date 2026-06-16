@@ -14,7 +14,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "feathermark",
     companyName: "Feathermark.io",
-    companyLogo: "https://assets.jaydingulley.me/images/companies/feathermark.svg",
+    companyLogo: "https://assets.jaydingulley.com/images/companies/feathermark.svg",
     companyWebsite: "https://feathermark.io",
     positions: [
       {
@@ -69,7 +69,7 @@ Client Project: [NOFA Jeep Army](https://nofajeeparmy.org)
   {
     id: "hotshots",
     companyName: "HotShots",
-    companyLogo: "https://assets.jaydingulley.me/images/companies/hotshots.svg",
+    companyLogo: "https://assets.jaydingulley.com/images/companies/hotshots.svg",
     positions: [
       {
         id: "1",
@@ -97,7 +97,7 @@ Client Project: [NOFA Jeep Army](https://nofajeeparmy.org)
   {
     id: "totalqualitylogistics",
     companyName: "Total Quality Logistics (TQL)",
-    companyLogo: "https://assets.jaydingulley.me/images/companies/tql.svg",
+    companyLogo: "https://assets.jaydingulley.com/images/companies/tql.svg",
     positions: [
       {
         id: "2",

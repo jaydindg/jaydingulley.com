@@ -8,7 +8,7 @@
     "motion"
   ],
   "registryDependencies": [
-    "https://jaydingulley.me/r/shimmering-text.json"
+    "https://jaydingulley.com/r/shimmering-text.json"
   ],
   "files": [
     {
@@ -17,6 +17,6 @@
       "type": "registry:component"
     }
   ],
-  "docs": "https://jaydingulley.me/components/slide-to-unlock",
+  "docs": "https://jaydingulley.com/components/slide-to-unlock",
   "type": "registry:component"
 }

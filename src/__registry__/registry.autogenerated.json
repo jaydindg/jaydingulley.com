@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "ncdai",
-  "homepage": "https://jaydingulley.me/components",
+  "homepage": "https://jaydingulley.com/components",
   "items": [
     {
       "name": "utils",
@@ -76,7 +76,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/theme-switcher",
+      "docs": "https://jaydingulley.com/components/theme-switcher",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -93,7 +93,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/text-flip",
+      "docs": "https://jaydingulley.com/components/text-flip",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -110,7 +110,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/apple-hello-effect",
+      "docs": "https://jaydingulley.com/components/apple-hello-effect",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -127,7 +127,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/apple-hello-effect",
+      "docs": "https://jaydingulley.com/components/apple-hello-effect",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -144,7 +144,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/apple-hello-effect",
+      "docs": "https://jaydingulley.com/components/apple-hello-effect",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -161,7 +161,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/apple-hello-effect",
+      "docs": "https://jaydingulley.com/components/apple-hello-effect",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -178,7 +178,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/react-wheel-picker",
+      "docs": "https://jaydingulley.com/components/react-wheel-picker",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -228,8 +228,8 @@
       "registryDependencies": [
         "collapsible",
         "separator",
-        "https://jaydingulley.me/r/chevrons-up-down-icon.json",
-        "https://jaydingulley.me/r/typography.json"
+        "https://jaydingulley.com/r/chevrons-up-down-icon.json",
+        "https://jaydingulley.com/r/typography.json"
       ],
       "files": [
         {
@@ -237,7 +237,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/work-experience-component",
+      "docs": "https://jaydingulley.com/components/work-experience-component",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -265,7 +265,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://jaydingulley.me/r/shimmering-text.json"
+        "https://jaydingulley.com/r/shimmering-text.json"
       ],
       "files": [
         {
@@ -273,7 +273,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/slide-to-unlock",
+      "docs": "https://jaydingulley.com/components/slide-to-unlock",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -283,9 +283,9 @@
       "description": "Scrolling marquee to showcase user testimonials.",
       "registryDependencies": [
         "@kibo-ui/marquee",
-        "https://jaydingulley.me/r/testimonial.json"
+        "https://jaydingulley.com/r/testimonial.json"
       ],
-      "docs": "https://jaydingulley.me/components/testimonials-marquee",
+      "docs": "https://jaydingulley.com/components/testimonials-marquee",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>",
       "files": []
@@ -461,7 +461,7 @@
         "jotai"
       ],
       "registryDependencies": [
-        "https://jaydingulley.me/r/copy-button.json"
+        "https://jaydingulley.com/r/copy-button.json"
       ],
       "files": [
         {
@@ -495,7 +495,7 @@
       "title": "Testimonial Spotlight",
       "description": "Testimonial card with spotlight effect on hover.",
       "registryDependencies": [
-        "https://jaydingulley.me/r/testimonial.json"
+        "https://jaydingulley.com/r/testimonial.json"
       ],
       "files": [
         {
@@ -533,7 +533,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://jaydingulley.me/components/middle-truncation",
+      "docs": "https://jaydingulley.com/components/middle-truncation",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -562,7 +562,7 @@
           }
         }
       },
-      "docs": "https://jaydingulley.me/components/twemoji",
+      "docs": "https://jaydingulley.com/components/twemoji",
       "type": "registry:component",
       "author": "ncdai <jaydin.gulley@outlook.com>"
     },
@@ -601,7 +601,7 @@
       "description": "A hero section with a golden spiral background.",
       "registryDependencies": [
         "button",
-        "https://jaydingulley.me/r/style.json"
+        "https://jaydingulley.com/r/style.json"
       ],
       "files": [
         {
@@ -659,7 +659,7 @@
       ],
       "registryDependencies": [
         "button",
-        "https://jaydingulley.me/r/style.json"
+        "https://jaydingulley.com/r/style.json"
       ],
       "files": [
         {
@@ -684,7 +684,7 @@
       "description": "A testimonials section with dual marquees.",
       "registryDependencies": [
         "https://www.kibo-ui.com/r/marquee.json",
-        "https://jaydingulley.me/r/testimonial-spotlight.json"
+        "https://jaydingulley.com/r/testimonial-spotlight.json"
       ],
       "files": [
         {
@@ -712,8 +712,8 @@
       "description": "A testimonials section with a lined layout.",
       "registryDependencies": [
         "https://www.kibo-ui.com/r/marquee.json",
-        "https://jaydingulley.me/r/style.json",
-        "https://jaydingulley.me/r/testimonial.json"
+        "https://jaydingulley.com/r/style.json",
+        "https://jaydingulley.com/r/testimonial.json"
       ],
       "files": [
         {
@@ -737,8 +737,8 @@
       "title": "Experience 01",
       "description": "A work experience section with a lined layout.",
       "registryDependencies": [
-        "https://jaydingulley.me/r/style.json",
-        "https://jaydingulley.me/r/work-experience.json"
+        "https://jaydingulley.com/r/style.json",
+        "https://jaydingulley.com/r/work-experience.json"
       ],
       "files": [
         {
@@ -758,7 +758,7 @@
       "title": "Team 01",
       "description": "A team section with glowing cards.",
       "registryDependencies": [
-        "https://jaydingulley.me/r/glow-card-grid.json"
+        "https://jaydingulley.com/r/glow-card-grid.json"
       ],
       "files": [
         {
@@ -824,7 +824,7 @@
           }
         }
       },
-      "docs": "https://jaydingulley.me/components/theme-toggle-effect",
+      "docs": "https://jaydingulley.com/components/theme-toggle-effect",
       "type": "registry:style",
       "author": "ncdai <jaydin.gulley@outlook.com>",
       "files": []
@@ -862,7 +862,7 @@
           }
         }
       },
-      "docs": "https://jaydingulley.me/components/theme-toggle-effect",
+      "docs": "https://jaydingulley.com/components/theme-toggle-effect",
       "type": "registry:style",
       "author": "ncdai <jaydin.gulley@outlook.com>",
       "files": []
@@ -899,7 +899,7 @@
           }
         }
       },
-      "docs": "https://jaydingulley.me/components/theme-toggle-effect",
+      "docs": "https://jaydingulley.com/components/theme-toggle-effect",
       "type": "registry:style",
       "author": "ncdai <jaydin.gulley@outlook.com>",
       "files": []
@@ -948,7 +948,7 @@
           }
         }
       },
-      "docs": "https://jaydingulley.me/components/theme-toggle-effect",
+      "docs": "https://jaydingulley.com/components/theme-toggle-effect",
       "type": "registry:style",
       "author": "ncdai <jaydin.gulley@outlook.com>",
       "files": []
@@ -984,7 +984,7 @@
           }
         }
       },
-      "docs": "https://jaydingulley.me/components/theme-toggle-effect",
+      "docs": "https://jaydingulley.com/components/theme-toggle-effect",
       "type": "registry:style",
       "author": "ncdai <jaydin.gulley@outlook.com>",
       "files": []

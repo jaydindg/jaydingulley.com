@@ -11,8 +11,8 @@
   "registryDependencies": [
     "collapsible",
     "separator",
-    "https://jaydingulley.me/r/chevrons-up-down-icon.json",
-    "https://jaydingulley.me/r/typography.json"
+    "https://jaydingulley.com/r/chevrons-up-down-icon.json",
+    "https://jaydingulley.com/r/typography.json"
   ],
   "files": [
     {
@@ -21,6 +21,6 @@
       "type": "registry:component"
     }
   ],
-  "docs": "https://jaydingulley.me/components/work-experience-component",
+  "docs": "https://jaydingulley.com/components/work-experience-component",
   "type": "registry:component"
 }

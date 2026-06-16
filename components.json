@@ -22,7 +22,7 @@
   "menuColor": "default",
   "menuAccent": "subtle",
   "registries": {
-    "@jaydindg": "https://jaydingulley.me/r/{name}.json",
+    "@jaydindg": "https://jaydingulley.com/r/{name}.json",
     "@kibo-ui": "https://kibo-ui.com/r/{name}.json",
     "@react-bits": "https://reactbits.dev/r/{name}.json"
   }
